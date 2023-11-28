@@ -99,9 +99,9 @@ This Event trait produces the `currentPositionChanged: aGeoPosition` Event
 ```
 
 ## Create a Component implementation of a Type
-There are two ways to create a new Molecule Component :
-- Create a new Component from scratch : write a new Class inheriting from the Component hierarchy
-- Re-using an existing Class : augmenting that class with Component behavior
+There are two ways to create a new Molecule Component:
+- Create a new Component from scratch: write a new Class inheriting from the Component hierarchy
+- Re-using an existing Class: augmenting that class with Component behavior
 
 ### Create a new Component from scratch
 To develop a new Component from scratch, a class needs to be created that must subclass the `MolAbstractComponentImpl` abstract Class.
@@ -118,7 +118,7 @@ We must use the Molecule Component interface `MolComponentImpl`, which is a Trai
 For this tutorial, the GNSS needs to send its geographical data to the Map. \
 In order to do that, its contract needs to be redefined to indicate which Services and Events are produced and provided by it.
 ![implementation contrat molecule](https://github.com/Eliott-Guevel/Molecule-various-fixes/assets/76944457/a9c14388-0abe-4f09-8ac5-578054f98ad1) \
-Redefining a Component's contract is done on the **Class side** of Pharo (in the **System Browser**, accessible through the **Browse** tab of Pharo, click on the radio button located left to the Class side text, which is located in the middle of the **System Browser** window). \
+Redefining a Component's contract is done on the **Class side** of Pharo (in the **System Browser** which is accessible through the **Browse** tab of Pharo, click on the radio button located left to the Class side text which is located in the middle of the **System Browser** window). \
 ![system browser red](https://github.com/Eliott-Guevel/Molecule-various-fixes/assets/76944457/7fa84d1d-45b4-4fe1-b524-6193fc7d6fec)
 ![class side red](https://github.com/Eliott-Guevel/Molecule-various-fixes/assets/76944457/7b189b8a-1552-46df-a69d-44f78bb73848)
 
@@ -181,7 +181,7 @@ MolGNSSDataImpl>>increaseAccuracy
 		self accuracy: nextAccuracy ]
 ```
 
-Then, override the `getAccuracyRadiusInMeters` Service (which will simply return `accuracy`). The override is done since the `getAccuracyRadiusInMeters` Service is declared in the `providedComponentServices` part of `MolGNSSData`'s contract. And since `MolGNSSDataImpl` is an implemmentation of `MolGNSSData`, the `getAccuracyRadiusInMeters` is implemented here.
+Then, override the `getAccuracyRadiusInMeters` Service (which will simply return `accuracy`). The override is done since the `getAccuracyRadiusInMeters` Service is declared in the `providedComponentServices` part of `MolGNSSData`'s contract. And since `MolGNSSDataImpl` is an implementation of `MolGNSSData`, the `getAccuracyRadiusInMeters` is implemented here.
 ```smalltalk
 MolGNSSDataImpl>>getAccuracyRadiusInMeters
 	"Get and return the accuracy of the GNSS depending quality of signal and quantity of connected satellites"
@@ -247,7 +247,7 @@ MolGNSSDataImpl>>componentPassivate
 ```
 
 ## Create the Component implementation for MolGNSSMap
-Same way as `MolGNSSDataImpl`, we can move on to create the Map Component, being `MolGNSSMapImpl`. This component uses the `MolGNSSMap` Trait, used to define the Component's contract, as well as the `MolGNSSDataEvents` interface, which needs to be specified in order for the Component to consume its Service.
+Same way as `MolGNSSDataImpl`, we can move on to create the Map Component, being `MolGNSSMapImpl`. This component uses the `MolGNSSMap` Trait, used to define the Component's contract as well as the `MolGNSSDataEvents` interface which needs to be specified in order for the Component to consume its Service.
 ```smalltalk
 MolAbstractComponentImpl subclass: #MolGNSSMapImpl
 	uses: MolGNSSMap + MolGNSSDataEvents
@@ -322,7 +322,7 @@ MolGNSSMapImpl>>currentPositionChanged: aGeoPosition
 ## Starting a Component
 Components are started using the `MolComponentImpl class>>start` instruction.
 Components are created with the `default` name when the `start` instruction is used.
-This is also why it's not possible to start two components of the same Type at any moment, since they both use the same name (`default`) and same Type Trait (leading to a `ComponentAlreadyExistsError`).
+This is also why it's not possible to start two components of the same Type at any moment since they both use the same name (`default`) and same Type Trait, leading to a `ComponentAlreadyExistsError`.
 
 **add img**
 
