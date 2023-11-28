@@ -338,11 +338,11 @@ The Pharo **Transcript** (also located in the **Browse** tab of Pharo) will star
 
 ### Starting a Component with a name
 It's also possible to create a component with a name by using the `MolComponentImpl class>>start: #[name]` method.
-This will be useful for [Producers](https://github.com/OpenSmock/Molecule/blob/main/documentation/Creating%20Producers.md), which determine which component of a given Type A receives events from which component of a given Type B, if multiple components of the same Type exist.
+This will be useful for [Producers](https://github.com/OpenSmock/Molecule/blob/main/documentation/Creating%20Producers.md), which determine which component of a given Type A receives events from which component of a given Type B if multiple components of the same Type exist.
 
 ## Stopping a Component
 Components are stopped using the `MolComponentImpl class>>stop` instruction. \
-Components with a name are stopped a similar method as `start`, which is `MolComponentImpl class>>stop: #[name]`.
+Components with a name are stopped a similar method as `start` which is `MolComponentImpl class>>stop: #[name]`.
 
 ### Stop the MolGNSSDataImpl and MolGNSSMapImpl Components
 In a **Playground** (located in the **Browse** tab of Pharo):
