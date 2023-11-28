@@ -7,7 +7,7 @@ Object subclass: #MolGPS-Examples
 	package: 'Molecule-Tutorial'
 ```
 then display the **Class side** of this class.
-This then allows the creation of methods for different test cases.
+This allows the creation of methods for different test cases.
 
 One practical thing is putting a `<script>` tag at the start of your methods. This will create a small icon next to your method in order to launch it without the use of a Playground.
 ```smalltalk
