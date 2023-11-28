@@ -229,9 +229,9 @@ To quickly detail this method, we first need to examine `getMolGNSSDataEventsNot
 To return to `componentActivate`, after every 50 milliseconds, a random geographical position is generated which is sent through the `currentPositionChanged: aGeoPosition` Event.
 
 Generated methods take the following forms:
-- get[componentName]EventsNotifier
-- get[componentName]EventsSubscriber
-- get[componentName]ServicesProvider
+- `get[componentName]EventsNotifier`
+- `get[componentName]EventsSubscriber`
+- `get[componentName]ServicesProvider`
 
 There is no need to manually type them.
 
