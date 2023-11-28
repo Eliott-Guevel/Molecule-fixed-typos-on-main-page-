@@ -5,7 +5,7 @@ They're directly linked, in the sense that a change detected in the first Compon
 ![gps molecule without figure](https://github.com/Eliott-Guevel/Molecule-various-fixes/assets/76944457/a949d2f8-c460-40be-985d-273881e5b3da) \
 GPS (Global Positioning System) is the american subsystem of GNSS (Global Navigation Satellite Systems).
 
-The complete GNSS example is present in the **Molecule-Examples** package, but if it's your first time using Molecule, you should follow this tutorial step-by-step in order to understand how Molecule works. \
+The complete GNSS example is present in the [Molecule-Examples](https://github.com/OpenSmock/Molecule/tree/main/src/Molecule-Examples) package, but if it's your first time using Molecule, you should follow this tutorial step-by-step in order to understand how Molecule works. \
 A graphical form of the example is available in the [Molecule-Geographical-Position-Example](https://github.com/OpenSmock/Molecule-Geographical-Position-Example) repository.
 
 # Contents
