@@ -41,7 +41,7 @@ In this example, that means that `MolGPSMapImpl` needs to be started **after** `
 
 ## Switching Components on the fly
 This test space can be useful for switching Components on the fly, stopping a component to start another having a different Type (make sure that they have a different name or that the current launched Component is stopped before the other of the same Type is launched).
-See the `Molecule-Examples` package for more examples on this.
+See the [Molecule-Examples](https://github.com/OpenSmock/Molecule/tree/main/src/Molecule-Examples) package for more examples on this.
 
 ## Calling another script
 To call another script, you simply have to call it like a regular function with `self [script]` since the `self` here represents the current class (for methods located in the class side).
